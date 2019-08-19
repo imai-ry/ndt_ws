@@ -1,0 +1,11 @@
+
+
+a. LiDARとカメラを起動しNDT-SLAMを行う. カメラの色情報は使っておらず, 点群の情報だけでSLAMを行う.
+$ roslaunch ndt_mapping ndt_jikken.launch
+$ cd /path/to/savefile/
+$ rosbag record -a
+
+b. カメラからの色情報を点群に付与したcolor_pointcloudをpublishする
+$ roslaunch ndt_mapping ndt_color_jikken.launch
+$ cd /path/to/savefile/
+$ rosbag record -a
