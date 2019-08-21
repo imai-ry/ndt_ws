@@ -8,11 +8,18 @@
     <arg name="device_ip" default="" />
     <arg name="frame_id" default="velodyne" />
     <arg name="manager" default="velodyne_nodelet_manager" />
-    <arg name="max_range" default="130.0" />
+    <arg name="max_range" default="150.0" />
     <arg name="min_range" default="0.4" />
   </include>
 
   <!-- camera -->
+  <include file="$(find ndt_mapping)/launch/uvc_cam.launch">
+    <arg name="width" value="1920" />
+    <arg name="height" value="960" />
+    <arg name="frame_rate" value="30" />
+  </include>
+
+<!--
   <include file="$(find ndt_mapping)/launch/usb_cam.launch">
     <arg name="video_device" value="/dev/video1" />
     <arg name="image_width" value="1920" />
@@ -21,6 +28,7 @@
     <arg name="camera_frame_id" value="usb_cam" />
     <arg name="io_method" value="mmap"/>
   </include>
+-->
 
   <!-- IMU -->
 <!--
@@ -42,7 +50,7 @@
     <!-- .GENERIC 3.OPENMP  -->
     <arg name="min_scan_range" value="1.0" />
     <arg name="max_scan_range" value="150.0" />
-    <arg name="min_add_scan_shift" value="0.0" />
+    <arg name="min_add_scan_shift" value="0.8" />
     <arg name="voxel_leaf_size" value="0.5" /> 
   </include>
   
