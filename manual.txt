@@ -1,11 +1,19 @@
 
 
 a. LiDARとカメラを起動しNDT-SLAMを行う. カメラの色情報は使っておらず, 点群の情報だけでSLAMを行う.
+
+1. check transform (base to lidar) and modify ndt_mapping.launch
+
+2. 
+(usb_cam)
 $ roslaunch ndt_mapping ndt_jikken.launch
 $ cd /path/to/savefile/
 $ rosbag record -a
 
-b. カメラからの色情報を点群に付与したcolor_pointcloudをpublishする
-$ roslaunch ndt_mapping ndt_color_jikken.launch
+(uvc_cam)
+$ roslaunch ndt_mapping ndt_jikken.launch
+$ ctrl + c
+$ sudo chmod 666 /dev/bus/usb/???/???
+$ roslaunch ndt_mapping ndt_jikken.launch
 $ cd /path/to/savefile/
 $ rosbag record -a
