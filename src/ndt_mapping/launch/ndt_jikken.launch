@@ -49,10 +49,10 @@
 
     <arg name="method_type" value="3" /> 
     <!-- .GENERIC 3.OPENMP  -->
-    <arg name="min_scan_range" value="1.0" />
+    <arg name="min_scan_range" value="2.0" />
     <arg name="max_scan_range" value="150.0" />
-    <arg name="min_add_scan_shift" value="0.5" />
-    <arg name="voxel_leaf_size" value="0.1" /> 
+    <arg name="min_add_scan_shift" value="0.7" />
+    <arg name="voxel_leaf_size" value="0.2" /> 
   </include>
 
 </launch>
