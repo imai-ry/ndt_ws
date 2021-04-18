@@ -5,13 +5,12 @@
   <arg name="tf_z" default="0.0" />
   <arg name="tf_roll" default="0.0" />
   <arg name="tf_pitch" default="0.0" />
-  <!-- -1.57 -->
   <arg name="tf_yaw" default="0.0" />
 
   <arg name="method_type" default="3" /> 
   <!-- .GENERIC 3.OPENMP  -->
   <arg name="min_scan_range" default="1.0" />
-  <arg name="max_scan_range" default="150.0" />
+  <arg name="max_scan_range" default="200.0" />
   <arg name="min_add_scan_shift" default="1.0" />
   <arg name="voxel_leaf_size" default="0.2" /> 
 
